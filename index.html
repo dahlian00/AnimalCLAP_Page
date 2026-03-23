@@ -1,1 +1,277 @@
-Coming Soon!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AnimalCLAP</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference">
+    <meta name="keywords" content="AnimalCLAP, Species Recognitaion, Aniaml, artificial intelligence, AI, artificial general intelligence">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference</title>
+
+    <link rel="icon" href="./static/images/agro_icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://kit.fontawesome.com/fff5b27ec1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/eaf1856e6f.js" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <!-- <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More Research
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://dahlian00.github.io/AnimalCluePage/">
+                <b>AnimalClue</b> <span style="font-size:18px; display: inline; margin-left: 5px;">🔥</span>
+              </a>
+              <a class="navbar-item" href="https://dahlian00.github.io/PetFacePage/">
+                <b>PetFace</b> <span style="font-size:18px; display: inline; margin-left: 5px;">🔥</span>
+              </a>
+              <a class="navbar-item" href="https://dahlian00.github.io/SegRCDBPage/">
+                SegRCDB
+              </a>
+            
+          </div>
+        </div> -->
+      </div>
+    </nav>
+
+
+
+    <!-- AFTER（修正後） -->
+    <section class="hero">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 publication-title is-bold">
+          <!-- <img src="static/images/agro_icon.png" style="width:1em; vertical-align: middle" alt="Logo"/> -->
+          <span class="mmmu" style="vertical-align: middle">AnimalCLAP</span>
+        </h1>
+        <h2 class="subtitle is-3 publication-subtitle">
+          AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference
+        </h2>
+        <h3 class="subtitle is-3 publication-subtitle">
+          ICASSP 2026
+        </h3>
+        <!-- <h3 class="subtitle is-3 publication-subtitle">
+          a
+        </h3> -->
+        <div class="is-size-5 publication-authors">
+          <br>
+          <span class="author-block">
+            <a href="https://sites.google.com/view/risashinoda/home" style="text-decoration: none; color: inherit;">Risa Shinoda*<sup>1,2</sup></a>,
+          </span>
+          <span class="author-block">
+            <a href="https://mapooon.github.io/" style="text-decoration: none; color: inherit;">Kaede Shiohara<sup>2</sup></a>,
+          </span>
+          <span class="author-block">
+            <a href="https://mmai.tech/" style="text-decoration: none; color: inherit;">Nakamasa Inoue<sup>3</sup></a>,
+          </span>
+          <span class="author-block">
+            <a href="https://sites.google.com/view/hiroaki-santo" style="text-decoration: none; color: inherit;">Hiroaki Santo<sup>1</sup></a>,
+          </span>
+          <span class="author-block">
+            <a href="https://fokura.jp/" style="text-decoration: none; color: inherit;">Fumio Okura<sup>1</sup></a>,
+          </span>
+        </div>
+        <div class="is-size-6 has-text-centered mt-3">
+          <p><sup>1</sup>The University of Osaka  <sup>2</sup>The University of Tokyo  <sup>3</sup>Institute of Science Tokyo</p>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <div class="publication-links">
+          <span class="link-block">
+            <a href="" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+      <span class="link-block">
+        <a class="external-link button is-normal is-rounded is-dark"
+          style="background-color:#aaa; border-color:#aaa; color:#666; pointer-events:none; cursor:not-allowed; opacity:0.7;">
+          <span class="icon" style="font-size:18px">🤗</span>
+          <span>Dataset</span>
+        </a>
+      </span>
+      <span class="link-block">
+        <a class="external-link button is-normal is-rounded is-dark"
+          style="background-color:#aaa; border-color:#aaa; color:#666; pointer-events:none; cursor:not-allowed; opacity:0.7;">
+          <span class="icon"><i class="fa-brands fa-github"></i></span>
+          <span>Code</span>
+        </a>
+      </span>
+          <!-- <span class="link-block">
+            <a href="https://github.com/dahlian00/AgroBench/tree/main" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span> -->
+        </div>
+      </div>
+    </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+        <img
+          src="static/images/teaser.png"
+          alt="geometric reasoning"
+          style="max-width: 80%; height: auto; margin-top: 2rem;"
+        >
+          <p class="mt-4">
+            AnimalCLAP dataset and model. We newly introduce a taxonomy-aware training for language-audio pretraining.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Animal vocalizations provide crucial insights for wildlife assessment, particularly in complex environments such as forests, aiding species identification and ecological monitoring.
+            Recent advances in deep learning have enabled automatic species classification from their vocalizations.
+            However, classifying species unseen during training remains challenging.
+            To address this limitation, we introduce AnimalCLAP, a taxonomy-aware language-audio framework comprising a new dataset and model that incorporate hierarchical biological information.
+            Specifically, our vocalization dataset consists of 4,225 hours of recordings covering 6,823 species, annotated with 22 ecological traits.
+            The AnimalCLAP model is trained on this dataset to align audio and textual representations using taxonomic structures, improving the recognition of unseen species.
+            We demonstrate that our proposed model effectively infers ecological and biological attributes of species directly from their vocalizations, achieving superior performance compared to CLAP. 
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- DATASET SECTION -->
+    <!-- <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">
+          <img src="static/images/agro_icon.png" alt="Logo" class="mmmu-logo"/>
+          <span class="mmmu">AnimalClue</span>
+        </h1>
+      </div>
+    </section> -->
+
+    <!-- RESULTS SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">Overview of Results</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+    
+        <!-- RESULTS -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Main Results</h2>
+            <div class="content has-text-justified">
+              <p>
+                Zero-shot accuracies on species not seen during training. Across all metrics, the AnimalCLAP model consistently achieves the highest performance. 
+              </p>
+              <img src="static/images/main.png" alt="algebraic reasoning" class="center">
+            </div>
+
+            
+          
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">t-SNE Visualization</h2>
+            <div class="content has-text-justified">
+                <p>
+                t-SNE visualization of AnimalCLAP and pretrained CLAP. In the top row, we observe that the AnimalCLAP model exhibits clearer embedding clusters aligned with the taxonomic hierarchy (class, order, family) compared to CLAP. Single-type models (e.g., Sci and Tax) excel in their respective query types but demonstrate weaker generalization across other types, whereas our proposed model sustains robust performance uniformly across all test settings.
+                </p>
+              <img src="static/images/tsne.png" alt="algebraic reasoning" class="center">
+            </div>
+
+            
+          
+          </div>
+        </div>
+    
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Classification Results of Ecological Traits</h2>
+            <div class="content has-text-justified">
+                <p>
+                Overall, our method consistently outperforms the CLAP baseline across all tasks (F1 Scores), highlighting the feasibility of inferring diverse ecological traits directly from sound.
+                </p>
+              <img src="static/images/traits.png" alt="algebraic reasoning" class="center">
+            </div>
+
+            
+          
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+    <!-- @PAN TODO: bibtex -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>
+
+    </code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
