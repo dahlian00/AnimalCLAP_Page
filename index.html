@@ -6,10 +6,65 @@
     <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta name="description"
-          content="AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference">
-    <meta name="keywords" content="AnimalCLAP, Species Recognitaion, Aniaml, artificial intelligence, AI, artificial general intelligence">
+          content="AnimalCLAP (ICASSP 2026): A taxonomy-aware language-audio pretraining framework with a dataset of 4,225 hours of animal vocalizations covering 6,823 species and 22 ecological traits, improving recognition of unseen species and trait inference from sound.">
+    <meta name="keywords" content="AnimalCLAP, animal vocalizations, bioacoustics, species recognition, ecological traits, language-audio pretraining, CLAP, taxonomy, ICASSP 2026">
+    <meta name="author" content="Risa Shinoda (篠田理沙), Kaede Shiohara, Nakamasa Inoue, Hiroaki Santo, Fumio Okura">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference</title>
+    <link rel="canonical" href="https://dahlian00.github.io/AnimalCLAP_Page/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference">
+    <meta property="og:description" content="A taxonomy-aware language-audio pretraining framework with a dataset of 4,225 hours of animal vocalizations covering 6,823 species and 22 ecological traits, improving recognition of unseen species and trait inference from sound.">
+    <meta property="og:url" content="https://dahlian00.github.io/AnimalCLAP_Page/">
+    <meta property="og:image" content="https://dahlian00.github.io/AnimalCLAP_Page/static/images/teaser.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference",
+      "url": "https://dahlian00.github.io/AnimalCLAP_Page/",
+      "image": [
+        "https://dahlian00.github.io/AnimalCLAP_Page/static/images/teaser.png",
+        "https://dahlian00.github.io/AnimalCLAP_Page/static/images/tsne.png"
+      ],
+      "datePublished": "2026",
+      "isPartOf": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2026)",
+      "sameAs": [
+        "https://arxiv.org/abs/2603.22053",
+        "https://doi.org/10.1109/ICASSP55912.2026.11463001"
+      ],
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Risa Shinoda",
+          "alternateName": "篠田理沙",
+          "url": "https://sites.google.com/view/risashinoda/home"
+        },
+        {
+          "@type": "Person",
+          "name": "Kaede Shiohara",
+          "url": "https://mapooon.github.io/"
+        },
+        {
+          "@type": "Person",
+          "name": "Nakamasa Inoue",
+          "url": "https://mmai.tech/"
+        },
+        {
+          "@type": "Person",
+          "name": "Hiroaki Santo",
+          "url": "https://sites.google.com/view/hiroaki-santo"
+        },
+        {
+          "@type": "Person",
+          "name": "Fumio Okura",
+          "url": "https://fokura.jp/"
+        }
+      ]
+    }
+    </script>
 
     <link rel="icon" href="./static/images/agro_icon.png">
 
@@ -82,7 +137,7 @@
         <div class="is-size-5 publication-authors">
           <br>
           <span class="author-block">
-            <a href="https://sites.google.com/view/risashinoda/home" style="text-decoration: none; color: inherit;">Risa Shinoda*<sup>1,2</sup></a>,
+            <a href="https://sites.google.com/view/risashinoda/home" style="text-decoration: none; color: inherit;">Risa Shinoda<sup>1,2</sup></a>,
           </span>
           <span class="author-block">
             <a href="https://mapooon.github.io/" style="text-decoration: none; color: inherit;">Kaede Shiohara<sup>2</sup></a>,
@@ -94,7 +149,7 @@
             <a href="https://sites.google.com/view/hiroaki-santo" style="text-decoration: none; color: inherit;">Hiroaki Santo<sup>1</sup></a>,
           </span>
           <span class="author-block">
-            <a href="https://fokura.jp/" style="text-decoration: none; color: inherit;">Fumio Okura<sup>1</sup></a>,
+            <a href="https://fokura.jp/" style="text-decoration: none; color: inherit;">Fumio Okura<sup>1</sup></a>
           </span>
         </div>
         <div class="is-size-6 has-text-centered mt-3">
@@ -146,7 +201,7 @@
         <div class="column has-text-centered">
         <img
           src="static/images/teaser.png"
-          alt="geometric reasoning"
+          alt="AnimalCLAP overview: dataset entries pairing animal sounds with taxonomy and trait information, taxonomy-aware audio-text contrastive training, and trait fine-tuning"
           style="max-width: 80%; height: auto; margin-top: 2rem;"
         >
           <p class="mt-4">
@@ -208,7 +263,7 @@
               <p>
                 Zero-shot accuracies on species not seen during training. Across all metrics, the AnimalCLAP model consistently achieves the highest performance. 
               </p>
-              <img src="static/images/main.png" alt="algebraic reasoning" class="center">
+              <img src="static/images/main.png" alt="Table of zero-shot top-1, top-5, and mAP for unseen species with common, scientific, and taxonomic name queries, comparing AnimalCLAP with CLAP" class="center">
             </div>
 
             
@@ -223,7 +278,7 @@
                 <p>
                 t-SNE visualization of AnimalCLAP and pretrained CLAP. In the top row, we observe that the AnimalCLAP model exhibits clearer embedding clusters aligned with the taxonomic hierarchy (class, order, family) compared to CLAP. Single-type models (e.g., Sci and Tax) excel in their respective query types but demonstrate weaker generalization across other types, whereas our proposed model sustains robust performance uniformly across all test settings.
                 </p>
-              <img src="static/images/tsne.png" alt="algebraic reasoning" class="center">
+              <img src="static/images/tsne.png" alt="t-SNE plots of animal sound embeddings colored by class, order, and family for AnimalCLAP and CLAP" class="center">
             </div>
 
             
@@ -238,7 +293,7 @@
                 <p>
                 Overall, our method consistently outperforms the CLAP baseline across all tasks (F1 Scores), highlighting the feasibility of inferring diverse ecological traits directly from sound.
                 </p>
-              <img src="static/images/traits.png" alt="algebraic reasoning" class="center">
+              <img src="static/images/traits.png" alt="Table of F1 scores for ecological trait classification from sound, including diet, activity, locomotion, habitat, and climate, for CLAP and AnimalCLAP" class="center">
             </div>
 
             
@@ -256,15 +311,12 @@
       <div class="container is-max-desktop content">
         <h2 class="title is-3 has-text-centered">BibTeX</h2>
         <pre><code>
-@INPROCEEDINGS{shinodaanimalclap,
+@article{shinodaanimalclap,
   author={Shinoda, Risa and Shiohara, Kaede and Inoue, Nakamasa and Santo, Hiroaki and Okura, Fumio},
-  booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  journal={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
   title={AnimalCLAP: Taxonomy-Aware Language-Audio Pretraining for Species Recognition and Trait Inference}, 
   year={2026},
-  volume={},
-  number={},
   pages={7767-7771},
-  keywords={Protocols;Communication systems;HTTP;Over-the-top media services;Semantic communication;Learning (artificial intelligence);Machine learning;Artificial intelligence;Generative Pre-trained transformer;Foundation models;Animal audio;species classification;contrastive learning;audio dataset;CLAP},
   doi={10.1109/ICASSP55912.2026.11463001}}
     </code></pre>
       </div>
@@ -275,7 +327,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+              This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
                                                   href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
               Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
